@@ -13,7 +13,7 @@ import java.util.Set;
 @Table(name="user", uniqueConstraints={@UniqueConstraint(columnNames={"username"})})
 public class ApplicationUser {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     private String firstName;
